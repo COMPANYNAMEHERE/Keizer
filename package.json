@@ -1,15 +1,17 @@
 {
-  "homepage": "https://companynamehere.github.io/Zev-Site",
+  "homepage": "https://companynamehere.github.io/ZEV",
   "name": "zev-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.4.2",
     "leaflet": "^1.9.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
+    "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4"
   },
@@ -20,7 +22,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
