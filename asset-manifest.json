@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ZEV/static/css/main.60854da3.css",
-    "main.js": "/ZEV/static/js/main.8842871e.js",
+    "main.css": "/ZEV/static/css/main.af225db1.css",
+    "main.js": "/ZEV/static/js/main.334fdd7f.js",
     "static/js/488.496d2748.chunk.js": "/ZEV/static/js/488.496d2748.chunk.js",
     "static/media/mexicano.png": "/ZEV/static/media/mexicano.00cba31aa49658879268.png",
     "static/media/kroket.png": "/ZEV/static/media/kroket.47e0fdfee652566250ce.png",
@@ -11,12 +11,12 @@
     "static/media/frietjes.png": "/ZEV/static/media/frietjes.2c7e4ae6602ce4e7efee.png",
     "static/media/zev.svg": "/ZEV/static/media/zev.11888b902f935e79defa20ed9abfb4ae.svg",
     "index.html": "/ZEV/index.html",
-    "main.60854da3.css.map": "/ZEV/static/css/main.60854da3.css.map",
-    "main.8842871e.js.map": "/ZEV/static/js/main.8842871e.js.map",
+    "main.af225db1.css.map": "/ZEV/static/css/main.af225db1.css.map",
+    "main.334fdd7f.js.map": "/ZEV/static/js/main.334fdd7f.js.map",
     "488.496d2748.chunk.js.map": "/ZEV/static/js/488.496d2748.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60854da3.css",
-    "static/js/main.8842871e.js"
+    "static/css/main.af225db1.css",
+    "static/js/main.334fdd7f.js"
   ]
 }
