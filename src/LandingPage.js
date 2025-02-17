@@ -1,31 +1,34 @@
 // src/LandingPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './App.css';
+import { motion } from 'framer-motion';
+import './css/landingpage.css';
 
 function LandingPage() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Send user to the main site content
-    navigate('/home');
+    // Wait 1 second after click, then navigate to the home page
+    setTimeout(() => {
+      navigate('/home');
+    }, 1000);
   };
 
   return (
     <div className="landing-container" onClick={handleClick}>
-      <div className="video-wrapper">
-        <iframe
-          className="video-background"
-          src="https://www.youtube.com/embed/U0eCDEpZ51k?autoplay=1&mute=1&controls=0&loop=1&playlist=U0eCDEpZ51k&modestbranding=1&rel=0&start=20"
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title="Background Video"
-        ></iframe>
-      </div>
-      <div className="landing-content">
-        <h1 className="landing-heading">ZEV - Zuipen en Vreten</h1>
-        <p className="landing-subtext">- Klik om door te gaan -</p>
-      </div>
+      <motion.div
+        className="landing-content"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <img
+          src={process.env.PUBLIC_URL + '/images/zev.svg'}
+          alt="Zev Logo"
+          className="landing-logo"
+        />
+        <h1 className="landing-title">ZEV - Zuipen & Eten</h1>
+      </motion.div>
     </div>
   );
 }

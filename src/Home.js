@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from './Header';
 import MapComponent from './MapComponent';
-import './App.css';
+import './css/app.css';
 
 function SectionCard({ children, id }) {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import { motion, AnimatePresence } from 'framer-motion';
-import './App.css';
+import './css/app.css';
 
 // Replace these with your actual Google Calendar credentials
 const GOOGLE_CALENDAR_API_KEY = 'AIzaSyA2QxErGoue-y_Cklk8ko_eZ3kKuWXhFaI';

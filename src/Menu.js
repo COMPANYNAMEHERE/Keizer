@@ -1,15 +1,26 @@
+// src/Menu.js
 import React from 'react';
 import Header from './Header';
-import './App.css';
+import './css/app.css';
 import { motion } from 'framer-motion';
 
+// Import images from src/images/menu
+// Ensure these files exist (case-sensitive) in the folder:
+// src/images/menu/frietjes.png, bitterballen.png, mexicano.png, broodje-bal.png, kaassouffle.png, kroket.png
+import frietjesImg from './images/menu/frietjes.png';
+import bitterballenImg from './images/menu/bitterballen.png';
+import mexicanoImg from './images/menu/mexicano.png';
+import broodjeBalImg from './images/menu/broodje-bal.png';
+import kaassouffleImg from './images/menu/kaassouffle.png';
+import kroketImg from './images/menu/kroket.png';
+
 const menuItems = [
-  { id: 1, naam: 'Frietjes', prijs: '€3,50', afbeelding: '/images/frietjes.jpg' },
-  { id: 2, naam: 'Bitterballen', prijs: '€5,00', afbeelding: '/images/bitterballen.jpg' },
-  { id: 3, naam: 'Americano', prijs: '€2,50', afbeelding: '/images/americano.jpg' },
-  { id: 4, naam: 'Broodje Bal', prijs: '€4,50', afbeelding: '/images/broodje-bal.jpg' },
-  { id: 5, naam: 'Kaassoufflé', prijs: '€3,00', afbeelding: '/images/kaassouffle.jpg' },
-  { id: 6, naam: 'Kroket', prijs: '€3,50', afbeelding: '/images/kroket.jpg' },
+  { id: 1, naam: 'Frietjes', prijs: '€3,50', afbeelding: frietjesImg },
+  { id: 2, naam: 'Bitterballen', prijs: '€5,00', afbeelding: bitterballenImg },
+  { id: 3, naam: 'Mexicano', prijs: '€2,50', afbeelding: mexicanoImg },
+  { id: 4, naam: 'Broodje Bal', prijs: '€4,50', afbeelding: broodjeBalImg },
+  { id: 5, naam: 'Kaassoufflé', prijs: '€3,00', afbeelding: kaassouffleImg },
+  { id: 6, naam: 'Kroket', prijs: '€3,50', afbeelding: kroketImg },
 ];
 
 // Container variants to stagger child animations
@@ -88,7 +99,7 @@ function Menu() {
                 boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
               }}
             >
-              {/* Image */}
+              {/* Image dynamically scales to fill the container */}
               <motion.img
                 src={item.afbeelding}
                 alt={item.naam}

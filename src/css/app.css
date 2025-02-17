@@ -1,0 +1,119 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Light gray background */
+  color: #000;
+}
+
+/* Global Centering Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Material Design Cards */
+.card {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+#intro.card {
+  min-height: 100vh;
+}
+
+/* Divider */
+.divider {
+  height: 2px;
+  background-color: #ccc;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Section Typography */
+.title-heading {
+  font-size: 2.5rem;
+  font-family: 'Permanent Marker', sans-serif;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.title-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.menu-heading,
+.location-heading,
+.hours-heading {
+  font-size: 2rem;
+  font-family: 'Permanent Marker', sans-serif;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+/* Menu List */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-item {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #333;
+}
+.menu-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Map Styles */
+.custom-map {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* Hours Card */
+.hours-card {
+  background-color: #f9f9f9;
+  color: #000;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.hours-row:last-child {
+  border-bottom: none;
+}
+.hours-day,
+.hours-time {
+  font-size: 1rem;
+}
+
+/* Main Site Container */
+.main-site {
+  position: relative;
+  min-height: 100vh;
+  background-color: transparent;
+  color: #000;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}

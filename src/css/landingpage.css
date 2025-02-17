@@ -1,0 +1,25 @@
+/* src/css/landingpage.css */
+.landing-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .landing-content {
+    text-align: center;
+  }
+  
+  .landing-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .landing-title {
+    font-family: sans-serif;
+    font-size: 2rem;
+    margin: 0;
+  }
