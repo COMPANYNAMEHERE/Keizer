@@ -1,0 +1,164 @@
+/* Container for the calendar section */
+.calendar-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Header for calendar navigation */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation buttons */
+  .nav-button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Box surrounding the calendar */
+  .calendar-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Calendar table styling */
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* ensures equal column widths */
+  }
+  
+  .calendar-table th,
+  .calendar-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: top;
+    height: 80px; /* fix each cell to 80px tall */
+    /* If you want each cell a bit bigger, increase this value. */
+  }
+  
+  .calendar-table th {
+    background: #f0f0f0;
+  }
+  
+  /* Individual cell content */
+  .calendar-cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* keep the box from growing with content */
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  
+  .date-number {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  /* Scrollable events container */
+  .events {
+    position: absolute;
+    top: 20px; /* below the date number */
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  .events::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Opera */
+  }
+  
+  /* Event elements within a day */
+  .event {
+    background: #007BFF;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Overlap days styling: those from previous or next months */
+  .calendar-cell.overlap {
+    background-color: #e0e0e0; /* darker gray */
+    color: #999;
+  }
+  
+  /* Extra info section styling */
+  .extra-info {
+    margin-top: 32px;
+    padding: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16),
+                0px 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: left;
+  }
+  
+  /* Modal overlay styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal content styling */
+  .modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Close button in the modal */
+  .close-button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background: #2196F3;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Highlight the current day */
+.calendar-cell.today {
+    background-color: #ffecb3; /* pale yellow, for example */
+    border: 2px solid #ffa000; /* orange border */
+  }

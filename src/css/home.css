@@ -1,0 +1,64 @@
+/* Styles for Upcoming Events section */
+
+/* Container for all upcoming events */
+.upcoming-events {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  /* Modern event card style */
+  .event-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Event title styling */
+  .event-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  /* Event date/time styling */
+  .event-date {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Optional: Event location styling */
+  .event-location {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  /* Optional: Event description styling */
+  .event-description {
+    margin: 12px 0 0;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* Loading / No events message styles */
+  .events-loading,
+  .no-events {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+    padding: 16px;
+  }
+
+  /* In home.css (or app.css if preferred) */
+.card.no-margin {
+    margin-bottom: 0;
+  }
