@@ -14,7 +14,7 @@ import Contact from './Contact';
 
 function App() {
   return (
-    <Router basename="/ZEV">
+    <Router basename="/Keizer">
       <Routes>
         {/* Landing page */}
         <Route path="/" element={<LandingPage />} />

@@ -1,4 +1,3 @@
-// src/Header.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -22,14 +21,15 @@ function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1.5, ease: 'easeOut' }}
     >
-      <img 
+      <motion.img 
         src={keizerLogo} 
         alt="The Keizer"  // Updated alt text for clarity
         className="header-logo"
         onClick={() => navigate('/home')}
+        whileHover={{ scale: 0.95 }}
+        transition={{ ease: 'easeOut' }}
       />
       <nav className="nav-links">
-        {/* Home button removed */}
         <button onClick={() => navigate('/menu')}>Menu</button>
         <button onClick={() => navigate('/evenementen')}>Evenementen</button>
         <button onClick={() => navigate('/contact')}>Contact</button>
