@@ -1,64 +1,206 @@
-/* Styles for Upcoming Events section */
+/* home.css — Centered, Full-Width Sections (minus 2px) */
 
-/* Container for all upcoming events */
+/* Main Site Container */
+.main-site {
+  width: calc(100% - 2px);
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  background-color: transparent;
+  color: #000;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+  padding-top: 0;
+}
+
+/* -------------------- */
+/* Slideshow Section    */
+/* -------------------- */
+.slideshow-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.slideshow-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.slideshow-container {
+  width: calc(100% - 2px);
+  max-width: 800px;
+  height: 450px; /* Fixed height for desktop */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: opacity 1s ease;
+}
+
+/* -------------------- */
+/* Location Section     */
+/* -------------------- */
+#location {
+  width: calc(100% - 2px);
+  margin: 50px auto 0 auto; /* 50px top margin for desktop */
+  text-align: center;
+}
+
+#location a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+/* -------------------- */
+/* Review Section       */
+/* -------------------- */
+#reviews {
+  width: calc(100% - 2px);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.reviews-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.reviews-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.google-review-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.google-review-link:hover {
+  background-color: #357ae8;
+}
+
+/* -------------------- */
+/* Upcoming Events      */
+/* -------------------- */
 .upcoming-events {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 16px;
-  }
-  
-  /* Modern event card style */
-  .event-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-  }
-  
-  .event-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  /* Event title styling */
-  .event-title {
-    margin: 0;
-    font-size: 1.25rem;
-    color: #333;
-  }
-  
-  /* Event date/time styling */
-  .event-date {
-    margin: 8px 0 0;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  /* Optional: Event location styling */
-  .event-location {
-    margin: 8px 0 0;
-    font-size: 0.9rem;
-    color: #444;
-  }
-  
-  /* Optional: Event description styling */
-  .event-description {
-    margin: 12px 0 0;
-    font-size: 0.85rem;
-    color: #555;
-  }
-  
-  /* Loading / No events message styles */
-  .events-loading,
-  .no-events {
-    font-size: 1rem;
-    color: #777;
-    text-align: center;
-    padding: 16px;
+  width: calc(100% - 2px);
+  margin: 16px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.event-card {
+  width: calc(100% - 2px);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+}
+
+.event-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.event-date {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.event-location {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.event-description {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* -------------------- */
+/* Divider & Utility    */
+/* -------------------- */
+.divider {
+  height: 2px;
+  background-color: #ccc;
+  width: calc(100% - 2px);
+  margin: 2rem auto;
+}
+
+.events-loading,
+.no-events {
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+  padding: 16px;
+}
+
+.card.no-margin {
+  margin-bottom: 0;
+}
+
+/* -------------------- */
+/* Mobile Adjustments   */
+/* -------------------- */
+@media (max-width: 600px) {
+  /* Keep everything strictly at (100% - 2px) */
+  .main-site,
+  .slideshow-container,
+  #location,
+  #reviews,
+  .upcoming-events,
+  .event-card,
+  .divider {
+    width: calc(100% - 2px);
+    margin: 0 auto;
+    padding: 0; /* Remove extra padding so it doesn't shift the layout */
   }
 
-  /* In home.css (or app.css if preferred) */
-.card.no-margin {
-    margin-bottom: 0;
+  /* Reduce top margin for a tighter look */
+  #location {
+    margin-top: 20px;
   }
+
+  /* Adjust slideshow height to be auto with 16:9 aspect ratio */
+  .slideshow-container {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .slideshow-image {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+  }
+}

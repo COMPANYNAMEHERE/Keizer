@@ -1,25 +1,34 @@
-/* src/css/landingpage.css */
+/* Landingpage.css */
+
+/* Container fills the viewport and centers content */
 .landing-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .landing-content {
-    text-align: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* white background */
+  padding: 1rem;
+}
+
+/* Landing content is centered */
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-logo {
+  width: 80%;
+  max-width: 400px;
+  height: auto; /* If auto doesn't work, try setting a fixed height */
+  min-height: 100px; /* Force a minimum height */
+  display: block;
+}
+
+/* On larger screens, increase the logo size */
+@media (min-width: 768px) {
   .landing-logo {
-    max-width: 200px;
-    margin-bottom: 20px;
+    width: 50%;
+    max-width: 600px;
   }
-  
-  .landing-title {
-    font-family: sans-serif;
-    font-size: 2rem;
-    margin: 0;
-  }
+}

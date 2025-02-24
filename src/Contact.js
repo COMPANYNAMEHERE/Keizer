@@ -98,26 +98,10 @@ function Contact() {
         </AnimatePresence>
 
         <section className="extra-contact-info">
-          <h3>Neem contact op via andere kanalen</h3>
-          <p>
-            Heeft u vragen? Bel ons op: <strong>0123-456789</strong>
-          </p>
-          <p>Volg ons op sociale media:</p>
-          <ul>
-            <li>
-              Facebook:{' '}
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                facebook.com/onsbedrijf
-              </a>
-            </li>
-            <li>
-              Instagram:{' '}
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                @onsbedrijf
-              </a>
-            </li>
-          </ul>
-        </section>
+  <h3>Neem contact op via andere kanalen</h3>
+
+  <p>Hier komen de sociale media kanalen en het telefoonnummer, zodra deze bestaan!.</p>
+</section>
       </motion.main>
     </>
   );

@@ -1,9 +1,16 @@
 // src/Home.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Header from './Header';
 import MapComponent from './MapComponent';
 import './css/app.css';
 import './css/home.css'; // Home-specific styles
+
+// Import slideshow images
+import purser1 from './images/purser1.jpeg';
+import purser2 from './images/purser2.PNG';
+import purser3 from './images/purser3.PNG';
+import purser4 from './images/purser4.PNG';
 
 function SectionCard({ children, id, noMargin }) {
   return (
@@ -17,15 +24,38 @@ function Divider() {
   return <div className="divider" />;
 }
 
-function TitleSection() {
+// New Slideshow Section as the first section
+function SlideshowSection() {
+  const images = [purser1, purser2, purser3, purser4];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % images.length);
+    }, 4000); // rotate every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <SectionCard id="intro" noMargin>
-      <h1 className="title-heading">ZEV - Zuipen en Vreten</h1>
-      <p className="title-description">
-        ZEV heeft midden in Rotterdam een spot neergezet waar je kunt chillen,
-        vreten en genieten van vette graffiti vibes. Neem de tijd en ontdek de
-        unieke sfeer van onze plek.
-      </p>
+    <SectionCard id="slideshow">
+      <div className="slideshow-section">
+        <h1 className="slideshow-title">De Keizer</h1>
+        <div className="slideshow-container">
+          <AnimatePresence>
+            <motion.img
+              key={images[current]}
+              src={images[current]}
+              alt={`Slide ${current + 1}`}
+              className="slideshow-image"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            />
+          </AnimatePresence>
+        </div>
+      </div>
     </SectionCard>
   );
 }
@@ -35,23 +65,28 @@ function LocationSection() {
     <>
       <SectionCard id="location">
         <h2 className="location-heading">Locatie</h2>
-        <MapComponent />
+        <a 
+          href="https://www.google.com/maps/place/De+Keizer" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ display: 'block' }}
+        >
+          <MapComponent />
+        </a>
       </SectionCard>
       <Divider />
     </>
   );
 }
 
-// UpcomingEvents now renders each event as a modern card.
 function UpcomingEvents() {
-  const [events, setEvents] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Get API keys from environment variables
   const GOOGLE_CALENDAR_API_KEY = process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY;
   const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchEvents = async () => {
       try {
         const now = new Date();
@@ -119,14 +154,38 @@ function EventsSection() {
   );
 }
 
+function ReviewSection() {
+  return (
+    <>
+      <SectionCard id="reviews">
+        <h2 className="reviews-heading">Laat een Google review achter!</h2>
+        <p className="reviews-description">
+          We horen graag wat je van De Keizer vindt. Laat een review achter op Google.
+        </p>
+        <a 
+          className="google-review-link" 
+          href="https://www.google.com/maps/place/De+Keizer" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Laat hier je review achter
+        </a>
+      </SectionCard>
+      <Divider />
+    </>
+  );
+}
+
 function Home() {
   return (
     <>
       <Header />
+      {/* Removed inline paddingTop; top margin is now managed in home.css */}
       <div className="main-site">
-        <TitleSection />
+        <SlideshowSection />
         <LocationSection />
         <EventsSection />
+        <ReviewSection />
       </div>
     </>
   );

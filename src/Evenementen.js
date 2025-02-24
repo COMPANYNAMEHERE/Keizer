@@ -295,9 +295,7 @@ function Calendar() {
       >
         <h3>Extra Informatie</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-          Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-          Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+          Elke woensdagavond is er dartavond, donderdag avond jamsessie.
         </p>
       </motion.div>
 
