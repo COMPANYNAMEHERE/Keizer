@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/ZEV/static/css/main.af225db1.css",
-    "main.js": "/ZEV/static/js/main.334fdd7f.js",
+    "main.css": "/ZEV/static/css/main.6c5d5464.css",
+    "main.js": "/ZEV/static/js/main.5ebb9ecc.js",
     "static/js/488.496d2748.chunk.js": "/ZEV/static/js/488.496d2748.chunk.js",
+    "static/media/purser2.PNG": "/ZEV/static/media/purser2.b2c494599b2115720e6c.PNG",
     "static/media/mexicano.png": "/ZEV/static/media/mexicano.00cba31aa49658879268.png",
     "static/media/kroket.png": "/ZEV/static/media/kroket.47e0fdfee652566250ce.png",
+    "static/media/purser1.jpeg": "/ZEV/static/media/purser1.515e9c20daed30811600.jpeg",
     "static/media/broodje-bal.png": "/ZEV/static/media/broodje-bal.8dd0921a553334218185.png",
+    "static/media/purser3.PNG": "/ZEV/static/media/purser3.1016752e5a8ed993d743.PNG",
+    "static/media/purser4.PNG": "/ZEV/static/media/purser4.a06b92dc66187a774d6a.PNG",
     "static/media/bitterballen.png": "/ZEV/static/media/bitterballen.f94305d249f3a99abf60.png",
     "static/media/kaassouffle.png": "/ZEV/static/media/kaassouffle.66df060085359f150a21.png",
     "static/media/frietjes.png": "/ZEV/static/media/frietjes.2c7e4ae6602ce4e7efee.png",
-    "static/media/zev.svg": "/ZEV/static/media/zev.11888b902f935e79defa20ed9abfb4ae.svg",
+    "static/media/KeizerLogo.svg": "/ZEV/static/media/KeizerLogo.ab1c5a207c228c4c021dddc0f9671e65.svg",
     "index.html": "/ZEV/index.html",
-    "main.af225db1.css.map": "/ZEV/static/css/main.af225db1.css.map",
-    "main.334fdd7f.js.map": "/ZEV/static/js/main.334fdd7f.js.map",
+    "main.6c5d5464.css.map": "/ZEV/static/css/main.6c5d5464.css.map",
+    "main.5ebb9ecc.js.map": "/ZEV/static/js/main.5ebb9ecc.js.map",
     "488.496d2748.chunk.js.map": "/ZEV/static/js/488.496d2748.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af225db1.css",
-    "static/js/main.334fdd7f.js"
+    "static/css/main.6c5d5464.css",
+    "static/js/main.5ebb9ecc.js"
   ]
 }
