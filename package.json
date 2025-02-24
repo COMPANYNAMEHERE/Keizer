@@ -1,7 +1,7 @@
 {
   "homepage": "https://companynamehere.github.io/Keizer",
   "name": "keizer-site",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
