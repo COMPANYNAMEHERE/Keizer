@@ -68,7 +68,7 @@
 #location {
   width: calc(100% - 2px);
   margin: 50px auto 0 auto; /* 50px top margin for desktop */
-  text-align: left; /* Changed from center */
+  text-align: center;
 }
 
 #location a {
@@ -81,7 +81,7 @@
 .location-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: f;
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 1rem;
@@ -109,6 +109,7 @@
   position: relative;
   top: 3px;
 }
+
 .opening-hours-container {
   flex: 1;
   text-align: right;
@@ -315,9 +316,22 @@
     flex-direction: column;
   }
   
-  /* Increase top & bottom margin for the review (Google) section */
+  /* Increase top & bottom margin and padding for the review section */
   #reviews {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Add top and bottom margins for upcoming events section and event cards */
+  .upcoming-events {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .event-card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
