@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Keizer/static/css/main.136bf51e.css",
-    "main.js": "/Keizer/static/js/main.559d9036.js",
+    "main.css": "/Keizer/static/css/main.511363e1.css",
+    "main.js": "/Keizer/static/js/main.98a2549e.js",
     "static/js/488.e15268c6.chunk.js": "/Keizer/static/js/488.e15268c6.chunk.js",
     "static/media/purser2.PNG": "/Keizer/static/media/purser2.b2c494599b2115720e6c.PNG",
     "static/media/mexicano.png": "/Keizer/static/media/mexicano.00cba31aa49658879268.png",
@@ -15,12 +15,12 @@
     "static/media/frietjes.png": "/Keizer/static/media/frietjes.2c7e4ae6602ce4e7efee.png",
     "static/media/KeizerLogo.svg": "/Keizer/static/media/KeizerLogo.ab1c5a207c228c4c021dddc0f9671e65.svg",
     "index.html": "/Keizer/index.html",
-    "main.136bf51e.css.map": "/Keizer/static/css/main.136bf51e.css.map",
-    "main.559d9036.js.map": "/Keizer/static/js/main.559d9036.js.map",
+    "main.511363e1.css.map": "/Keizer/static/css/main.511363e1.css.map",
+    "main.98a2549e.js.map": "/Keizer/static/js/main.98a2549e.js.map",
     "488.e15268c6.chunk.js.map": "/Keizer/static/js/488.e15268c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.136bf51e.css",
-    "static/js/main.559d9036.js"
+    "static/css/main.511363e1.css",
+    "static/js/main.98a2549e.js"
   ]
 }
