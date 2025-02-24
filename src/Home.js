@@ -1,16 +1,11 @@
 // src/Home.js
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Header from './Header';
 import MapComponent from './MapComponent';
+import SlideShow from './slideShow';
 import './css/app.css';
-import './css/home.css'; // Home-specific styles
-
-// Import slideshow images
-import purser1 from './images/purser1.jpeg';
-import purser2 from './images/purser2.PNG';
-import purser3 from './images/purser3.PNG';
-import purser4 from './images/purser4.PNG';
+import './css/home.css';
 
 function SectionCard({ children, id, noMargin }) {
   return (
@@ -24,55 +19,81 @@ function Divider() {
   return <div className="divider" />;
 }
 
-// New Slideshow Section as the first section
-function SlideshowSection() {
-  const images = [purser1, purser2, purser3, purser4];
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent(prev => (prev + 1) % images.length);
-    }, 4000); // rotate every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  return (
-    <SectionCard id="slideshow">
-      <div className="slideshow-section">
-        <h1 className="slideshow-title">De Keizer</h1>
-        <div className="slideshow-container">
-          <AnimatePresence>
-            <motion.img
-              key={images[current]}
-              src={images[current]}
-              alt={`Slide ${current + 1}`}
-              className="slideshow-image"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-            />
-          </AnimatePresence>
-        </div>
-      </div>
-    </SectionCard>
-  );
-}
-
 function LocationSection() {
   return (
     <>
       <SectionCard id="location">
         <h2 className="location-heading">Locatie</h2>
-        <a 
-          href="https://www.google.com/maps/place/De+Keizer" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ display: 'block' }}
-        >
-          <MapComponent />
-        </a>
+        <div className="location-content">
+          <a 
+            href="https://www.google.com/maps/place/De+Keizer" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="location-map"
+          >
+            <MapComponent />
+          </a>
+          <div className="cafe-details">
+            <div className="cafe-info">
+              <h3 className="cafe-title">Café De Keizer</h3>
+              <p>
+                <strong>Adres:</strong> Keizerstraat 160, 3011 GH Rotterdam, Netherlands
+              </p>
+              <p>
+                <strong>Telefoon:</strong> 010-12345678
+              </p>
+            </div>
+            <div className="opening-hours-container">
+              <h3 className="opening-hours-title">Openingstijden</h3>
+              <table className="opening-hours">
+                <thead>
+                  <tr>
+                    <th>Dag</th>
+                    <th>Open</th>
+                    <th>Sluit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Maandag</td>
+                    <td>15:00</td>
+                    <td>23:00</td>
+                  </tr>
+                  <tr>
+                    <td>Dinsdag</td>
+                    <td>15:00</td>
+                    <td>23:00</td>
+                  </tr>
+                  <tr>
+                    <td>Woensdag</td>
+                    <td>15:00</td>
+                    <td>23:00</td>
+                  </tr>
+                  <tr>
+                    <td>Donderdag</td>
+                    <td>15:00</td>
+                    <td>23:00</td>
+                  </tr>
+                  <tr>
+                    <td>Vrijdag</td>
+                    <td>15:00</td>
+                    <td>01:00</td>
+                  </tr>
+                  <tr>
+                    <td>Zaterdag</td>
+                    <td>15:00</td>
+                    <td>01:00</td>
+                  </tr>
+                  <tr>
+                    <td>Zondag</td>
+                    <td>16:00</td>
+                    <td>22:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </SectionCard>
       <Divider />
     </>
@@ -80,13 +101,13 @@ function LocationSection() {
 }
 
 function UpcomingEvents() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [events, setEvents] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
 
   const GOOGLE_CALENDAR_API_KEY = process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY;
   const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID;
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchEvents = async () => {
       try {
         const now = new Date();
@@ -180,9 +201,20 @@ function Home() {
   return (
     <>
       <Header />
-      {/* Removed inline paddingTop; top margin is now managed in home.css */}
       <div className="main-site">
-        <SlideshowSection />
+        {/* Slideshow Section */}
+        <SectionCard id="slideshow">
+          <motion.h1
+            className="home-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
+            style={{ textAlign: 'center', marginBottom: '1rem' }}
+          >
+            Kom naar de Keizer!
+          </motion.h1>
+          <SlideShow />
+        </SectionCard>
         <LocationSection />
         <EventsSection />
         <ReviewSection />

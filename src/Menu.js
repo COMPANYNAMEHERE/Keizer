@@ -5,8 +5,6 @@ import './css/app.css';
 import { motion } from 'framer-motion';
 
 // Import images from src/images/menu
-// Ensure these files exist (case-sensitive) in the folder:
-// src/images/menu/frietjes.png, bitterballen.png, mexicano.png, broodje-bal.png, kaassouffle.png, kroket.png
 import frietjesImg from './images/menu/frietjes.png';
 import bitterballenImg from './images/menu/bitterballen.png';
 import mexicanoImg from './images/menu/mexicano.png';
@@ -99,7 +97,6 @@ function Menu() {
                 boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
               }}
             >
-              {/* Image dynamically scales to fill the container */}
               <motion.img
                 src={item.afbeelding}
                 alt={item.naam}
@@ -115,7 +112,6 @@ function Menu() {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
               />
-              {/* Overlay with text */}
               <motion.div
                 className="card-overlay"
                 style={{

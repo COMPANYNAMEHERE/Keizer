@@ -1,5 +1,19 @@
 /* home.css — Centered, Full-Width Sections (minus 2px) */
 
+/* -------------------- */
+/* Page Load Animation  */
+/* -------------------- */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Main Site Container */
 .main-site {
   width: calc(100% - 2px);
@@ -11,6 +25,7 @@
   overflow-x: hidden;
   padding-bottom: 2rem;
   padding-top: 0;
+  animation: slideIn 2.5s ease-out forwards;
 }
 
 /* -------------------- */
@@ -53,13 +68,104 @@
 #location {
   width: calc(100% - 2px);
   margin: 50px auto 0 auto; /* 50px top margin for desktop */
-  text-align: center;
+  text-align: left; /* Changed from center */
 }
 
 #location a {
   display: block;
   width: 100%;
   text-decoration: none;
+}
+
+/* Layout for location content */
+.location-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Map styling remains the same */
+.location-map {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+/* Café details split into two columns with left/right alignment */
+.cafe-details {
+  flex: 1 1 50%;
+  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.cafe-info {
+  flex: 1;
+  text-align: left;
+  position: relative;
+  top: 3px;
+}
+.opening-hours-container {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Unified title styling for both columns */
+.cafe-title,
+.opening-hours-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.opening-hours-title {
+  text-align: right;
+}
+
+/* Modernized table for opening hours (more compact) */
+.opening-hours {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;  /* Added bottom margin for larger section */
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.opening-hours th,
+.opening-hours td {
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.opening-hours th {
+  background-color: #3a3b3c;
+  color: #fff;
+  font-weight: bold;
+}
+
+.opening-hours td {
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+.opening-hours tr:nth-child(even) td {
+  background-color: #f0f0f0;
+}
+
+.opening-hours tr:hover td {
+  background-color: #e0e0e0;
 }
 
 /* -------------------- */
@@ -110,10 +216,14 @@
   gap: 16px;
 }
 
+#slideshow .slideShow-title {
+  margin-top: 0;
+}
+
 .event-card {
   width: calc(100% - 2px);
   margin: 0 auto;
-  background: #fff;
+  background: #f0f0f0; /* Light gray background */
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -174,7 +284,6 @@
 /* Mobile Adjustments   */
 /* -------------------- */
 @media (max-width: 600px) {
-  /* Keep everything strictly at (100% - 2px) */
   .main-site,
   .slideshow-container,
   #location,
@@ -184,15 +293,13 @@
   .divider {
     width: calc(100% - 2px);
     margin: 0 auto;
-    padding: 0; /* Remove extra padding so it doesn't shift the layout */
+    padding: 0;
   }
 
-  /* Reduce top margin for a tighter look */
   #location {
     margin-top: 20px;
   }
 
-  /* Adjust slideshow height to be auto with 16:9 aspect ratio */
   .slideshow-container {
     height: auto;
     aspect-ratio: 16 / 9;
@@ -202,5 +309,15 @@
     display: block;
     margin: 0 auto;
     height: 100%;
+  }
+
+  .location-content {
+    flex-direction: column;
+  }
+  
+  /* Increase top & bottom margin for the review (Google) section */
+  #reviews {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }

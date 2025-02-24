@@ -4,13 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './css/app.css';
 import './css/evenementen.css';
 
-// Get API keys from environment variables
 const GOOGLE_CALENDAR_API_KEY = process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY;
 const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID;
-
-// Debugging: Log the keys (remove these in production)
-console.log("API Key:", GOOGLE_CALENDAR_API_KEY);
-console.log("Calendar ID:", CALENDAR_ID);
 
 function Calendar() {
   const currentDate = new Date();
@@ -353,20 +348,6 @@ function Evenementen() {
     <>
       <Header />
       <main className="events-page container">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-        >
-          Evenementen
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
-        >
-          Bekijk hier onze aankomende evenementen.
-        </motion.p>
         <Calendar />
       </main>
     </>

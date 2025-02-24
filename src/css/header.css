@@ -5,11 +5,11 @@
   padding: 1rem;
   text-align: center;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-  position: fixed;       /* Changed from sticky to fixed */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;         /* Ensures header is always on top */
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@
 
 /* Header Logo */
 .header-logo {
-  width: 675px; /* 25% smaller than the previous 900px */
+  width: 675px;
   height: auto;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -54,6 +54,14 @@
   transform: scale(0.95);
 }
 
+/* Active button style to indicate current page */
+.nav-links button.active {
+  background-color: #bbb; /* Slightly darker grey */
+  color: #2a2a2a;
+  border-color: #666;
+  box-shadow: none;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   .header {
@@ -62,18 +70,18 @@
   
   .header-logo {
     width: 80%;
-    max-width: 225px; /* Reduced 25% from 300px */
-    margin-bottom: 0.5rem; /* Reduced space between logo and buttons */
+    max-width: 225px;
+    margin-bottom: 0.5rem;
   }
   
   .nav-links {
-    flex-direction: row; /* Keep buttons next to each other */
-    gap: 0.5rem; /* Adjust gap as needed */
+    flex-direction: row;
+    gap: 0.5rem;
   }
   
   .nav-links button {
     margin: 0.25rem;
-    width: auto; /* Let the buttons size naturally */
+    width: auto;
     font-size: 0.9rem;
     padding: 0.5rem;
   }
