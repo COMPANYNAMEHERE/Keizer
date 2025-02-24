@@ -12,7 +12,7 @@ function SlideShow() {
   const [current, setCurrent] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  // Preload images
+  // Preload images using Promise.allSettled as fallback
   useEffect(() => {
     const promises = images.map((src) => {
       return new Promise((resolve, reject) => {
@@ -23,9 +23,10 @@ function SlideShow() {
       });
     });
 
-    Promise.all(promises)
-      .then(() => setImagesLoaded(true))
-      .catch((error) => console.error('Error preloading images:', error));
+    Promise.allSettled(promises)
+      .then(() => {
+        setImagesLoaded(true);
+      });
   }, [images]);
 
   // Rotate images every 6 seconds after preload
