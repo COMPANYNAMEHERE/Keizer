@@ -1,4 +1,3 @@
-// src/LandingPage.js
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,12 +8,19 @@ function LandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Set flag so that Header knows to animate in
     localStorage.setItem('fromLanding', 'true');
+    // Add the home class to remove extra padding
+    document.body.classList.add('home');
+
     const timer = setTimeout(() => {
       navigate('/home');
-    }, 4000); // Navigate after 4 seconds
-    return () => clearTimeout(timer);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timer);
+      // Remove the home class on cleanup
+      document.body.classList.remove('home');
+    };
   }, [navigate]);
 
   return (
