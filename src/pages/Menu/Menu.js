@@ -1,16 +1,16 @@
 // src/Menu.js
 import React from 'react';
-import Header from './Header';
-import './css/app.css';
+import Header from '../../components/Header/Header';
+import '../../styles/app.css';
 import { motion } from 'framer-motion';
 
 // Import images from src/images/menu
-import frietjesImg from './images/menu/frietjes.png';
-import bitterballenImg from './images/menu/bitterballen.png';
-import mexicanoImg from './images/menu/mexicano.png';
-import broodjeBalImg from './images/menu/broodje-bal.png';
-import kaassouffleImg from './images/menu/kaassouffle.png';
-import kroketImg from './images/menu/kroket.png';
+import frietjesImg from '../../images/menu/frietjes.png';
+import bitterballenImg from '../../images/menu/bitterballen.png';
+import mexicanoImg from '../../images/menu/mexicano.png';
+import broodjeBalImg from '../../images/menu/broodje-bal.png';
+import kaassouffleImg from '../../images/menu/kaassouffle.png';
+import kroketImg from '../../images/menu/kroket.png';
 
 const menuItems = [
   { id: 1, naam: 'Frietjes', prijs: '€3,50', afbeelding: frietjesImg },

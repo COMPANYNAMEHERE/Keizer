@@ -2,13 +2,13 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import keizerLogo from './images/KeizerLogo.svg';
+import keizerLogo from '../../images/KeizerLogo.svg';
 // Import the heavy slideshow images to preload
-import purser1 from './images/purser1.jpeg';
-import purser2 from './images/purser2.PNG';
-import purser3 from './images/purser3.PNG';
-import purser4 from './images/purser4.PNG';
-import './css/landingpage.css';
+import purser1 from '../../images/purser1.jpeg';
+import purser2 from '../../images/purser2.PNG';
+import purser3 from '../../images/purser3.PNG';
+import purser4 from '../../images/purser4.PNG';
+import './landingpage.css';
 
 function LandingPage() {
   const navigate = useNavigate();

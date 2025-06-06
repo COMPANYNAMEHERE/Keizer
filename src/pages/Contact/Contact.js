@@ -2,9 +2,9 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from 'emailjs-com';
-import Header from './Header';
-import './css/app.css';      // Global styles
-import './css/contact.css';  // Contact-specific styles
+import Header from '../../components/Header/Header';
+import '../../styles/app.css';      // Global styles
+import './contact.css';  // Contact-specific styles
 
 function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);

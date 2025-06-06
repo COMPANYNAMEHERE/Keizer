@@ -1,11 +1,11 @@
 // src/Home.js
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from './Header';
-import MapComponent from './MapComponent';
-import SlideShow from './slideShow';
-import './css/app.css';
-import './css/home.css';
+import Header from '../../components/Header/Header';
+import MapComponent from '../../components/MapComponent/MapComponent';
+import SlideShow from '../../components/SlideShow/SlideShow';
+import '../../styles/app.css';
+import './home.css';
 
 function SectionCard({ children, id, noMargin }) {
   return (
