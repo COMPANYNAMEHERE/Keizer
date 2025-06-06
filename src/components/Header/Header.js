@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import './css/header.css';
-import keizerLogo from './images/KeizerLogo.svg';
+import './header.css';
+import keizerLogo from '../../images/KeizerLogo.svg';
 
 function Header() {
   const navigate = useNavigate();

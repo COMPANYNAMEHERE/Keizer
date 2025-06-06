@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+import Header from '../../components/Header/Header';
 import { motion, AnimatePresence } from 'framer-motion';
-import './css/app.css';
-import './css/evenementen.css';
+import '../../styles/app.css';
+import './evenementen.css';
 
 const GOOGLE_CALENDAR_API_KEY = process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY;
 const CALENDAR_ID = process.env.REACT_APP_CALENDAR_ID;

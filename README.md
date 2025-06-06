@@ -26,3 +26,16 @@ Real-time updates from the Google Calendar API.
 
 Made by
 Joost van Tiggelen.
+
+## Project Structure
+
+```
+src/
+  components/   # Reusable UI pieces like Header or SlideShow
+  pages/        # Top level pages rendered by the router
+  styles/       # Global CSS such as app.css
+  images/       # Static assets referenced by the app
+```
+
+Each component or page keeps its own stylesheet next to the component for
+easier maintenance.

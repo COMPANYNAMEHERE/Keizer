@@ -1,11 +1,11 @@
 // src/SlideShow.js
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import purser1 from './images/purser1.jpeg';
-import purser2 from './images/purser2.PNG';
-import purser3 from './images/purser3.PNG';
-import purser4 from './images/purser4.PNG';
-import './css/slideShow.css';
+import purser1 from '../../images/purser1.jpeg';
+import purser2 from '../../images/purser2.PNG';
+import purser3 from '../../images/purser3.PNG';
+import purser4 from '../../images/purser4.PNG';
+import './slideShow.css';
 
 function SlideShow() {
   const images = [purser1, purser2, purser3, purser4];

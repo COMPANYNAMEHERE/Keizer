@@ -6,11 +6,11 @@ import {
   Route,
 } from 'react-router-dom';
 
-import LandingPage from './LandingPage';
-import Home from './Home';
-import Menu from './Menu';
-import Evenementen from './Evenementen';
-import Contact from './Contact';
+import LandingPage from './pages/LandingPage/LandingPage';
+import Home from './pages/Home/Home';
+import Menu from './pages/Menu/Menu';
+import Evenementen from './pages/Evenementen/Evenementen';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
