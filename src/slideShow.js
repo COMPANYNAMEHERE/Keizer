@@ -7,8 +7,11 @@ import purser3 from './images/purser3.PNG';
 import purser4 from './images/purser4.PNG';
 import './css/slideShow.css';
 
+// Keep the slideshow images constant across renders to avoid
+// restarting the preload effect on every re-render
+const images = [purser1, purser2, purser3, purser4];
+
 function SlideShow() {
-  const images = [purser1, purser2, purser3, purser4];
   const [current, setCurrent] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -27,7 +30,7 @@ function SlideShow() {
       .then(() => {
         setImagesLoaded(true);
       });
-  }, [images]);
+  }, []);
 
   // Rotate images every 6 seconds after preload
   useEffect(() => {
@@ -36,7 +39,7 @@ function SlideShow() {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [imagesLoaded, images.length]);
+  }, [imagesLoaded]);
 
   if (!imagesLoaded) {
     return <div className="slideShow-loading">Loading slideshow...</div>;
